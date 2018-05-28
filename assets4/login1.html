@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="viewport" content="width=device-width"/>
+<title>Ikan Lelang</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="logo ikan lelang.png">
+</head>
+<script language="JavaScript">
+        function Login(){
+       
+        var username=document.login.username.value;
+        username=username.toLowerCase();
+        var password=document.login.password.value;
+        password=password.toLowerCase();
+       
+            if (username=="luqni" && password=="sayangibu"){
+            alert("Selamat anda berhasil login");
+            setTimeout("location.href='index2.html'", 10);
+            }
+            else{
+            alert("User name dan password anda salah! jika belum memiliki akun silahkan daftar");
+            }
+        }       
+        </script>
+       
+<body>
+<img src="images/login.png" align="center">
+        <form name="login">
+        	
+            <table width="225" cellpadding="4" align="center" border="1">
+            <tr><td>Username</td><td><input type="text" name="username"></td></tr>
+            <tr><td>Password</td><td><input type="password" name="password"></td></tr>
+            <tr><td>Masuk Sebagai</td><td><input type="text" name="masuk"></td></tr>
+            <tr><td colspan="2" align="center"><input type="button" value="Login" onClick="Login()"></td></tr>
+            </table>
+    
+
+
+</body>
+</html>
