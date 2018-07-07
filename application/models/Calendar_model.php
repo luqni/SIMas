@@ -19,7 +19,7 @@ class Calendar_model extends CI_Model {
 	{
 
 	$sql = "INSERT INTO events (title,events.start,events.end,description, color) VALUES (?,?,?,?,?)";
-	$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], '#0263ff'));
+	$this->db->query($sql, array($_POST['title'], $_POST['start'],$_POST['end'], $_POST['description'], $_POST['color']));
 		return ($this->db->affected_rows()!=1)?false:true;
 	}
 

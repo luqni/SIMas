@@ -39,10 +39,10 @@
     <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a id="logo" class="pull-left" href="three"></a>
       <div class="nav-collapse  pull-right">
         <ul class="nav">
-          <li class="active"><a href="three">Beranda</a></li>
-          <li><a href="<?php echo site_url('tentang'); ?>">Tentang Kami</a></li>
-          <li><a href="<?php echo site_url('prayers'); ?>">Prayers</a></li>
-          <li><a href="three-templates">Artikel</a></li>
+          <li class="active"><a href="<?php echo base_url(); ?>">Beranda</a></li>
+          <!-- <li ><a href="<?php echo site_url('Tentang'); ?>">Tentang Kami</a></li> -->
+          <!-- <li><a href="<?php echo site_url('Prayer'); ?>">Prayers</a></li> -->
+          <li><a href="<?php echo site_url('Editor'); ?>">Editor</a></li>
           <li><a href="<?php echo site_url('Calendar'); ?>">Peminjaman</a>
           </li>
           <li><a href="<?php echo site_url('welcome'); ?>">Logout</a></li>
@@ -87,13 +87,20 @@
                                     <textarea class="form-control" id="description" name="description"></textarea>
                                 </div>
                             </div>
-                            <!-- <div class="form-group">
-                                <label class="col-md-4 control-label" for="color">Colors</label>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="color">Pinjam</label>
                                 <div class="col-md-4">
-                                    <input id="color" name="color" type="text" class="form-control input-md" readonly="readonly" />
-                                    <span class="help-block">Click to pick a color</span>
+                                    <!-- <input id="color" name="color" type="text" class="form-control input-md" readonly="readonly" /> -->
+                                    <!-- <input id="color" name="color" type="text" class="form-control input-md" />
+                                    <span class="help-block">Click to pick a color</span> -->
+                                    <form method='POST' action=''>
+                                    <h4><select name="color" id="color">
+                                    <option value="#17ff02">Karpet</option>
+                                    <option value="#001dff">Ruangan Mushola</option>
+                                    <option value="#fffa00">Mic</option>
+                                    </select>
                                 </div>
-                            </div> -->
+                            </div>
                         </form>
                     </div>
                     <div class="modal-footer">

@@ -205,8 +205,8 @@ footer a:hover {
 <meta name="description" content="Free Islamic website templates, resources, icons, vectors, prayer times for your website, and Islamic content." />
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets2/css/uncss.css">
-<script src="three/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-<link rel="shortcut icon" href="three/favicon.ico">
+<script src="<?php echo base_url(); ?>assets2/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<link rel="shortcut icon" href="<?php echo base_url(); ?>assets2/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url(); ?>assets2/images/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url(); ?>assets2/images/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>assets2/ico/apple-touch-icon-72-precomposed.png">
@@ -218,10 +218,12 @@ footer a:hover {
       <div class="nav-collapse collapse pull-right">
         <ul class="nav">
           <li class="active"><a href="<?php echo base_url(); ?>">Beranda</a></li>
-          <li><a href="<?php echo site_url('tentang'); ?>">Tentang Kami</a></li>
-          <li><a href="<?php echo site_url('prayers'); ?>">Prayers</a></li>
-          <li><a href="three-templates">Artikel</a></li>
+          <li ><a href="<?php echo site_url('Tentang'); ?>">Tentang Kami</a></li>
+          <!-- <li><a href="<?php echo site_url('Prayer'); ?>">Prayers</a></li> -->
+          <li><a href="<?php echo site_url('Blog'); ?>">Artikel</a></li>
           <li><a href="<?php echo site_url('Calendar'); ?>">Peminjaman</a>
+          </li>
+          <li><a href="<?php echo site_url('Keuangan'); ?>">Keuangan</a>
           </li>
           <!-- <li><a href="<?php echo site_url('welcome'); ?>">Login</a></li> -->
         </ul>
@@ -235,8 +237,8 @@ footer a:hover {
       <div class="da-slide">
         <h2>Sistem Informasi Masjid</h2>
         <p>Visit <a href="https://freeislamictemplates.appspot.com/">https://simasnf.com/</a></p>
-        <a href="#" class="da-link">Read more</a>
-        <div class="da-img"><img src="<?php echo base_url(); ?>assets2/images/slider/1.png" alt="Masjid Template 1" height="165" width="307"/></div>
+        <a href="<?php echo site_url('Tentang'); ?>" class="da-link">Read more</a>
+        <div class="da-img"><img src="<?php echo base_url(); ?>assets2/images/googleplus-badge2.png" alt="Masjid Template 1" height="165" width="307"/></div>
       </div>
       <div class="da-slide">
         <h2>Info Kegiatan</h2>
@@ -248,108 +250,54 @@ footer a:hover {
     </div>
   </div>
 </section>
-<section id="services">
-  <div class="container">
-    <div class="center">
-      <h2><a href="https://freeislamictemplates.appspot.com/">Free Islamic Templates</a></h2>
-    </div>
-    <div class="row-fluid">
-      <div class="middle-box span3">
-        <div class="media">
-          <div class="pull-left"> <i class="icon-globe icon-medium"></i> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Website Templates</h4>
-            <p>There are two available, but more will be added later.</p>
-          </div>
-        </div>
-      </div>
-      <div class="middle-box span3">
-        <div class="media">
-          <div class="pull-left"> <i class="icon-thumbs-up-alt icon-medium"></i> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Logos</h4>
-            <p>Coming soon.</p>
-          </div>
-        </div>
-      </div>
-      <div class="middle-box span3">
-        <div class="media">
-          <div class="pull-left"> <i class="icon-leaf icon-medium icon-rounded"></i> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Prayer Times</h4>
-            <p>Prayer times added to templates.</p>
-          </div>
-        </div>
-      </div>
-            <div class="middle-box span3">
-        <div class="media">
-          <div class="pull-left"> <i class="icon-leaf icon-medium icon-rounded"></i> </div>
-          <div class="media-body">
-            <h4 class="media-heading">Prayer Times</h4>
-            <p>Prayer times added to templates.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <section id="recent-works">
   <div class="container">
     <div class="center">
-      <h2>Recent Templates</h2>
-      <p class="lead">Latest items will be added below.</p>
+      <p class="lead">Jadwal Kegiatan dan Waktu Sholat</p>
+      <script type="text/javascript">
+        window.setTimeout("waktu()",1000);
+        function waktu() {
+          var tanggal = new Date();
+          window.setTimeout("waktu()",1000);
+          document.getElementById("tanggalku").innerHTML
+          = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+          <?php
+            $day = date('l');
+            $date =  Date("d-m-Y");
+
+            ?>  
+        }
+      </script>
+      <p >
+        <?php
+        echo $day ." ". $date;
+        ?>
+      </p>
+      <h2 id="tanggalku"></h2>
+       
     </div>
-    <ul class="gallery col-4">
-      <li>
-        <div class="preview"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/thumb/item1.jpg" alt="Image" height="128" width="213">
-          <div class="overlay"> </div>
-          <div class="links"><a href="">Preview</a></div>
-        </div>
-        <div class="desc">
-          <h5>Masjid Template 1</h5>
-        </div>
-        <div id="modal-1" class="modal hide fade"> <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-          <div class="modal-body"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/full/item1.jpg" alt="Image" height="180" width="300"> </div>
-        </div>
-      </li>
-      <li>
-        <div class="preview"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/thumb/item2.jpg" alt="Image" height="128" width="213">
-          <div class="overlay"> </div>
-          <div class="links"><a href="">Preview</a></div>
-        </div>
-        <div class="desc">
-          <h5>Masjid Template 2</h5>
-        </div>
-        <div id="modal-1" class="modal hide fade"> <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-          <div class="modal-body"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/full/item2.jpg" alt="Image" height="180" width="300"> </div>
-        </div>
-      </li>
-      <li>
-        <div class="preview"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/thumb/item1.jpg" alt="Image" height="128" width="213">
-          <div class="overlay"> </div>
-          <div class="links"><a href="">Preview</a></div>
-        </div>
-        <div class="desc">
-          <h5>Masjid Template 1</h5>
-        </div>
-        <div id="modal-3" class="modal hide fade"> <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-          <div class="modal-body"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/full/item1.jpg" alt="Image" height="180" width="300"> </div>
-        </div>
-      </li>
-      <li>
-        <div class="preview"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/thumb/item2.jpg" alt="Image" height="128" width="213">
-          <div class="overlay"> </div>
-          <div class="links"><a href="">Preview</a></div>
-        </div>
-        <div class="desc">
-          <h5>Masjid Template 2</h5>
-        </div>
-        <div id="modal-4" class="modal hide fade"> <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-          <div class="modal-body"> <img src="<?php echo base_url(); ?>assets2/images/portfolio/full/item2.jpg" alt="Image" height="180" width="300"> </div>
-        </div>
-      </li>
-    </ul>
+    <br>
+    <table width="30%" border="1">
+      <tr>
+        <td align="center">Subuh</td>
+        <td align="center">Dhuhur</td>
+        <td align="center">Asar</td>
+        <td align="center">Maghrib</td>
+        <td align="center">Isya</td>
+      </tr>
+      <tr>
+        <td align="center">4:37</td>
+        <td align="center">11:51</td>
+        <td align="center">15:13</td>
+        <td align="center">17:14</td>
+        <td align="center">18:59</td>
+      </tr>
+    </table> 
+<br>
+<p>*Sewaktu-waktu jadwal bisa berubah</p>
   </div>
+
 </section>
 <section id="bottom" class="main"> 
   <div class="container"> 
@@ -359,7 +307,7 @@ footer a:hover {
         <ul class="unstyled address">
           <li> <i class="icon-home"></i><strong>Address:</strong><a href="https://plus.google.com/b/100537539023412941569/100537539023412941569/" target="_blank">Google+</a></li>
           <li> <i class="icon-envelope"></i> <strong>Forum: </strong><a href="#">Google Group</a></li>
-          <li> <i class="icon-globe"></i> <strong>Website:</strong><a href="/">Free Islamic Templates</a></li>
+          <li> <i class="icon-globe"></i> <strong>Website:</strong><a href="/">simasnf.com</a></li>
         </ul>
       </div>
       <div id="tweets" class="span3">
@@ -369,19 +317,19 @@ footer a:hover {
             <li><a href="three">Home</a></li>
             <li><a href="three-about">About Me</a></li>
             <li><a href="three-prayers">Prayers</a></li>
-            <li><a href="three-templates">Templates</a></li>
-            <li><a href="three-blog">Blog</a></li>
-            <li><a href="three-services">Services</a></li>
+            <li><a href="three-templates">Artikel</a></li>
+            <li><a href="three-blog">Kas Mushola</a></li>
+            <li><a href="three-services">Peminjaman</a></li>
           </ul>
         </div>
       </div>
       <div id="archives" class="span3">
-        <h4>WEBSITE TEMPLATES</h4>
+        <h4>Agenda dan Kajian </h4>
         <div>
           <ul class="arrow">
-            <li><a href="#">Template 1</a></li>
-            <li><a href="#">Template 2</a></li>
-            <li><a href="#">Template 3</a></li>
+            <li><a href="#">Kajian Bulanan</a></li>
+            <li><a href="#">Mentoring</a></li>
+            <li><a href="#">Tahzin Tahfidz</a></li>
           </ul>
         </div>
       </div>
@@ -406,7 +354,7 @@ footer a:hover {
 <footer id="footer">
   <div class="container">
     <div class="row-fluid">
-      <div class="footer5 span5 cp"> &copy; <a href="https://freeislamictemplates.appspot.com/">Free Islamic Templates 2014</a> . All Rights Reserved. <a href="https://plus.google.com/100537539023412941569" rel="publisher"></a>
+      <div class="footer5 span5 cp"> &copy; <a href="https://freeislamictemplates.appspot.com/">Mushola STT-NF 2018</a> . All Rights Reserved. <a href="https://plus.google.com/100537539023412941569" rel="publisher"></a>
 </div>
       <div class="footer6 span6">
         <ul class="social pull-right">
@@ -435,5 +383,6 @@ footer a:hover {
                 });
             });
         </script>
+
 </body>
 </html>

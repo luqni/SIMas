@@ -1,0 +1,132 @@
+<section id="services">
+  <div class="container">
+    <div class="center">
+      <h2><a href="https://freeislamictemplates.appspot.com/">Free Islamic Templates</a></h2>
+    </div>
+    <div class="row-fluid">
+      <div class="middle-box span3">
+        <div class="media">
+          <div class="pull-left"> <i class="icon-globe icon-medium"></i> </div>
+          <div class="media-body">
+            <h4 class="media-heading">Website Templates</h4>
+            <p>There are two available, but more will be added later.</p>
+          </div>
+        </div>
+      </div>
+      <div class="middle-box span3">
+        <div class="media">
+          <div class="pull-left"> </div>
+          <div class="media-body">
+            <h4 class="media-heading">Logos</h4>
+            <p>Coming soon.</p>
+          </div>
+        </div>
+      </div>
+      <div class="middle-box span3">
+        <div class="media">
+          <!-- <div class="pull-left"> <i class="icon-leaf icon-medium icon-rounded"></i> </div> -->
+          <div class="media-body">
+            <h1 align="center" style="color: #000849" >
+                  <script type="text/javascript">        
+                      function tampilkanwaktu(){         //fungsi ini akan dipanggil di bodyOnLoad dieksekusi tiap 1000ms = 1detik    
+                      var waktu = new Date();            //membuat object date berdasarkan waktu saat 
+                      var sh = waktu.getHours() + "";    //memunculkan nilai jam, //tambahan script + "" supaya variable sh bertipe string sehingga bisa dihitung panjangnya : sh.length    //ambil nilai menit
+                      var sm = waktu.getMinutes() + "";  //memunculkan nilai detik    
+                      var ss = waktu.getSeconds() + "";  //memunculkan jam:menit:detik dengan menambahkan angka 0 jika angkanya cuma satu digit (0-9)
+                      document.getElementById("clock").innerHTML = (sh.length==1?"0"+sh:sh) + ":" + (sm.length==1?"0"+sm:sm) + ":" + (ss.length==1?"0"+ss:ss);
+                      }
+                  </script>
+
+                  <body onload="tampilkanwaktu();setInterval('tampilkanwaktu()', 1000);">        
+                  <span id="clock"></span>
+                  </h1>
+                  <p align="center">
+                  <?php
+                  $hari = date('l');
+                  /*$new = date('l, F d, Y', strtotime($Today));*/
+                  if ($hari=="Sunday") {
+                   echo "Minggu";
+                  }elseif ($hari=="Monday") {
+                   echo "Senin";
+                  }elseif ($hari=="Tuesday") {
+                   echo "Selasa";
+                  }elseif ($hari=="Wednesday") {
+                   echo "Rabu";
+                  }elseif ($hari=="Thursday") {
+                   echo("Kamis");
+                  }elseif ($hari=="Friday") {
+                   echo "Jum'at";
+                  }elseif ($hari=="Saturday") {
+                   echo "Sabtu";
+                  }
+                  ?>,
+                  <?php
+                  $tgl =date('d');
+                  echo $tgl;
+                  $bulan =date('F');
+                  if ($bulan=="January") {
+                   echo " Januari ";
+                  }elseif ($bulan=="February") {
+                   echo " Februari ";
+                  }elseif ($bulan=="March") {
+                   echo " Maret ";
+                  }elseif ($bulan=="April") {
+                   echo " April ";
+                  }elseif ($bulan=="May") {
+                   echo " Mei ";
+                  }elseif ($bulan=="June") {
+                   echo " Juni ";
+                  }elseif ($bulan=="July") {
+                   echo " Juli ";
+                  }elseif ($bulan=="August") {
+                   echo " Agustus ";
+                  }elseif ($bulan=="September") {
+                   echo " September ";
+                  }elseif ($bulan=="October") {
+                   echo " Oktober ";
+                  }elseif ($bulan=="November") {
+                   echo " November ";
+                  }elseif ($bulan=="December") {
+                   echo " Desember ";
+                  }
+                  $tahun=date('Y');
+                  echo $tahun;
+                  ?>
+            </p>
+          </div>
+        </div>
+      </div>
+            <div class="middle-box span3">
+        <div class="media">
+          <div class="pull-left">  </div>
+          <div class="media-body">
+            <h4 align="center" class="media-heading">Waktu Sholat</h4>
+            <table>
+              <tr>
+                <td>| Imsyak</td>
+                <td>04:26 |</td>
+              
+                <td>Subuh</td>
+                <td>04:36 |</td>
+              </tr>
+              <tr>
+                <td>| Dhuhur</td>
+                <td>11:52 |</td>
+              
+                <td>Ashr</td>
+                <td>15:13 |</td>
+              </tr>
+              <tr>
+                <td>| Maghrib</td>
+                <td>17:49 |</td>
+              
+                <td>Isya</td>
+                <td>19:00 |</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
